@@ -1,16 +1,16 @@
-def binary_search(list, item):
-    low = 0
-    high = len(list) - 1
-    while low <= high:
-        mid = int((low + high) / 2)
-        guess = list[mid]
-        if guess == item:
+def binary_search(list, item): # Только для отсортированных списков каждая итерация сокращает список в два раза
+    low = 0 # Начальный индекс поиска
+    high = len(list) - 1  # Конечный индекс поиска
+    while low <= high: # Пока начальный меньше или равен конечному ИСТИНА 
+        mid = int((low + high) / 2) # Находим середину списка
+        guess = list[mid] 
+        if guess == item: # Если если значение искомое возвращаем его индекс
             return mid
-        elif guess > item:
+        elif guess > item: # Если значение больше искомого то средний индекс становится конечным
             high = mid - 1
-        else:
+        else:              # Иначе средний становится начальным индексом
             low = mid + 1
-    return None
+    return None # Если ничего не найдено возвращаем None
 
 list = [1, 3, 4, 6, 7, 8, 23, 54, 66, 76, 85, 111, 123, 342]
 print(binary_search(list, 4))
