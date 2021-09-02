@@ -14,5 +14,3 @@ def selecion_sort(arr):
         smallerest = find_smallest(arr)
         new_arr.append(arr.pop(smallerest)) # Удаляем наименьший элемент и тарого массива и добавляем в новый
     return new_arr
-list = [1, 3, 4, 6, 7, 8, 23, 54, 66, 76, 85, 111, 123, 342, 4, 2, 54, 34, 654, 23, 322,]
-print(selecion_sort(list))
