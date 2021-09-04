@@ -20,14 +20,10 @@ def person_is_need(name):
         return True
     else:
         return False
-graph = {}
-graph["Roman"] = ["Ira", "Ivan", "Ivan"]
-graph["Ira"] = ["Tanya", "Ylya"]
-graph["Ivan"] = ["Maks", "Ilya"]
-graph["Kris"] = []
-graph["Tanya"] = []
-graph["Ylya"] = []
-graph["Maks"] = []
-graph["Ilya"] = []
-
+graph = {"Roman": ["Ira", "Kris", "Ivan"], 
+        "Ira": ["Tanya", "Ylya"], 
+        "Ivan": ["Maks", "Ilya"], 
+        "Kris": [], "Tanya": [], "Ylya": [],
+        "Maks": [], "Ilya": []}
 search(graph, "Roman")
+print(graph)
